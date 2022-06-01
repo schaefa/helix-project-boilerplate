@@ -4,7 +4,7 @@
   project: 'AS Helix Project',
   plugins: [
     {
-      id: 'Inserts',
+      // id: 'Inserts',
       // button: {
       //   text: 'Insert Into',
       //   action: function () {
