@@ -21,29 +21,29 @@ window.hlx.initSidekick({
   ]
 });
 
-// export function insertButtonClicked() {
-//   console.log('Insert Button Click called')
-// }
-
-async function loadPlugins() {
-  // alert('Callback called, sidekick: ' + sidekick + ', plugin: ' + plugin);
-  try {
-    const loadPlugin = new Promise((resolve) => {
-      (async () => {
-        try {
-          const mod = await import(`./hw-plugin.js`);
-        } catch (err) {
-          // eslint-disable-next-line no-console
-          console.log(`failed to load HW Sidekick Extension`, err);
-        }
-        resolve();
-      })();
-    });
-    await Promise.all([loadPlugin]);
-  } catch (err) {
-    // eslint-disable-next-line no-console
-    console.log(`failed to load HW Sidekick Extension`, err);
-  }
+export function insertButtonClicked() {
+  console.log('Insert Button Click called')
 }
 
-loadPlugins()
+// async function loadPlugins() {
+//   // alert('Callback called, sidekick: ' + sidekick + ', plugin: ' + plugin);
+//   try {
+//     const loadPlugin = new Promise((resolve) => {
+//       (async () => {
+//         try {
+//           const mod = await import(`./hw-plugin.js`);
+//         } catch (err) {
+//           // eslint-disable-next-line no-console
+//           console.log(`failed to load HW Sidekick Extension`, err);
+//         }
+//         resolve();
+//       })();
+//     });
+//     await Promise.all([loadPlugin]);
+//   } catch (err) {
+//     // eslint-disable-next-line no-console
+//     console.log(`failed to load HW Sidekick Extension`, err);
+//   }
+// }
+//
+// loadPlugins()
