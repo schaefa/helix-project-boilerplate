@@ -1,6 +1,16 @@
-export let mySidekick;
-export let myPlugin;
+class HwPlugin {
 
-export function insertButtonClicked() {
-  console.log('Insert Button Click called, sidekick: ' + mySidekick + ', plugin: ' + myPlugin);
+  mySidekick
+  myPlugin
+
+  constructor(sidekick, plugin) {
+    this.mySidekick = sidekick
+    this.myPlugin = plugin
+  }
+
+  insertButtonClicked() {
+    console.log('Insert Button Click called, sidekick: ' + mySidekick + ', plugin: ' + myPlugin);
+  }
 }
+
+module.exports = HwPlugin

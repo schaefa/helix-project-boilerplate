@@ -1,4 +1,6 @@
-import { mySidekick, myPlugin, insertButtonClicked } from "./hw-plugin.js";
+const HWPlugin = require('hw-plugin')
+
+let hwPlugin
 
 window.hlx.initSidekick({
    // Does not work so ignore it for now
@@ -11,7 +13,7 @@ window.hlx.initSidekick({
       button: {
         text: 'Insert Into',
         action: function () {
-          insertButtonClicked();
+          hwPlugin.insertButtonClicked();
         },
         isPressed: function (param1) {
           // alert('Plugin Button Pressed')
@@ -20,8 +22,7 @@ window.hlx.initSidekick({
         }
       },
       callback: function (sidekick, plugin) {
-        mySidekick = sidekick;
-        myPlugin = plugin;
+        hwPlugin = new HWPlugin(sidekick, plugin)
       }
     }
   ]
