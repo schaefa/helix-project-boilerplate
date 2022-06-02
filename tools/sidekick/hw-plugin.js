@@ -9,6 +9,9 @@ export default class HwPlugin {
   }
 
   insertButtonClicked() {
-    console.log('Insert Button Click called, sidekick: ' + this.mySidekick + ', plugin: ' + this.myPlugin  + ', Plugin keys: ' + Object.keys(this.myPlugin));
+    console.log('Insert Button Click called, sidekick: ' + this.mySidekick + ', plugin: ' + this.myPlugin);
+    for(let key in this.myPlugin) {
+      console.log('Plugin, key: ' + key + ', value: ' + this.myPlugin[key])
+    }
   }
 }
