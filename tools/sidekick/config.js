@@ -21,6 +21,10 @@ window.hlx.initSidekick({
   ]
 });
 
+// export function insertButtonClicked() {
+//   console.log('Insert Button Click called')
+// }
+
 async function loadPlugins() {
   // alert('Callback called, sidekick: ' + sidekick + ', plugin: ' + plugin);
   try {
