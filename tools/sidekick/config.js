@@ -1,7 +1,7 @@
 let mySidekick;
 let myPlugin
 
-import { insertButtonClicked } from "./hw-plugin";
+import { insertButtonClicked } from "./hw-plugin.js";
 
 window.hlx.initSidekick({
    // Does not work so ignore it for now
