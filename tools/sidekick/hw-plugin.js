@@ -9,6 +9,6 @@ export default class HwPlugin {
   }
 
   insertButtonClicked() {
-    console.log('Insert Button Click called, sidekick: ' + mySidekick + ', plugin: ' + myPlugin);
+    console.log('Insert Button Click called, sidekick: ' + this.mySidekick + ', plugin: ' + this.myPlugin);
   }
 }
