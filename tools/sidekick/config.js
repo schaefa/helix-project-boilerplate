@@ -1,4 +1,7 @@
- window.hlx.initSidekick({
+import { insertButtonClicked } from './hw-plugin';
+
+window.hlx.initSidekick({
+   // Does not work so ignore it for now
   // owner: 'schaefa',
   // repo: 'https://github.com/schaefa/helix-project-boilerplate',
   // project: 'AS Helix Project',
@@ -8,14 +11,14 @@
       button: {
         text: 'Insert Into',
         action: function () {
-          alert('Plugin Button Clicked');
+          insertButtonClicked();
         },
         isPressed: function () {
-          alert('Plugin Button Pressed')
+          // alert('Plugin Button Pressed')
         }
       },
       callback: function (sidekick, plugin) {
-        alert('Callback called, sidekick: ' + sidekick + ', plugin: ' + plugin);
+        // alert('Callback called, sidekick: ' + sidekick + ', plugin: ' + plugin);
       }
     }
   ]
