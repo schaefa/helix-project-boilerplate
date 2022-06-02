@@ -1,4 +1,4 @@
-export class HwPlugin {
+export default class HwPlugin {
 
   mySidekick
   myPlugin

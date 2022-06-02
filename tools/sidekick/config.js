@@ -1,5 +1,5 @@
 // const HWPlugin = require('hw-plugin')
-const { HwPlugin } = import('./hw-plugin.js')
+import HwPlugin from './hw-plugin.js'
 
 let hwPlugin
 
