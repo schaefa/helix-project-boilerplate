@@ -1,4 +1,4 @@
-class HwPlugin {
+export class HwPlugin {
 
   mySidekick
   myPlugin
@@ -12,5 +12,3 @@ class HwPlugin {
     console.log('Insert Button Click called, sidekick: ' + mySidekick + ', plugin: ' + myPlugin);
   }
 }
-
-module.exports = HwPlugin
