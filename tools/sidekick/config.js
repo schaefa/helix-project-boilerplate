@@ -1,5 +1,5 @@
 // const HWPlugin = require('hw-plugin')
-const HWPlugin = import('./hw-plugin.js')
+const { HwPlugin } = import('./hw-plugin.js')
 
 let hwPlugin
 
@@ -23,7 +23,7 @@ window.hlx.initSidekick({
         }
       },
       callback: function (sidekick, plugin) {
-        hwPlugin = new HWPlugin(sidekick, plugin)
+        hwPlugin = new HwPlugin(sidekick, plugin)
       }
     }
   ]
