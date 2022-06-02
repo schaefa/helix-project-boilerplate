@@ -1,7 +1,3 @@
-// import { insertButtonClicked } from './hw-plugin';
-
-import {loadCSS} from "../../scripts/scripts";
-
 window.hlx.initSidekick({
    // Does not work so ignore it for now
   // owner: 'schaefa',
