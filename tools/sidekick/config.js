@@ -1,3 +1,6 @@
+let mySidekick;
+let myPlugin
+
 window.hlx.initSidekick({
    // Does not work so ignore it for now
   // owner: 'schaefa',
@@ -16,13 +19,15 @@ window.hlx.initSidekick({
         }
       },
       callback: function (sidekick, plugin) {
+        mySidekick = sidekick;
+        myPlugin = plugin;
       }
     }
   ]
 });
 
 export function insertButtonClicked() {
-  console.log('Insert Button Click called')
+  console.log('Insert Button Click called, sidekick: ' + mySidekick + ', plugin: ' + myPlugin);
 }
 
 // async function loadPlugins() {
