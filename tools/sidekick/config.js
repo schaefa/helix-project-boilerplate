@@ -1,6 +1,8 @@
 let mySidekick;
 let myPlugin
 
+import { insertButtonClicked } from "./hw-plugin";
+
 window.hlx.initSidekick({
    // Does not work so ignore it for now
   // owner: 'schaefa',
@@ -12,7 +14,7 @@ window.hlx.initSidekick({
       button: {
         text: 'Insert Into',
         action: function () {
-          insertButtonClicked();
+          insertButtonClicked2();
         },
         isPressed: function () {
           // alert('Plugin Button Pressed')
@@ -26,10 +28,11 @@ window.hlx.initSidekick({
   ]
 });
 
-export function insertButtonClicked() {
+export function insertButtonClicked2() {
   console.log('Insert Button Click called, sidekick: ' + mySidekick + ', plugin: ' + myPlugin);
 }
 
+// The import does work but the
 // async function loadPlugins() {
 //   // alert('Callback called, sidekick: ' + sidekick + ', plugin: ' + plugin);
 //   try {
