@@ -10,8 +10,15 @@ export default class HwPlugin {
 
   insertButtonClicked() {
     console.log('Insert Button Click called, sidekick: ' + this.mySidekick + ', plugin: ' + this.myPlugin);
-    for(let key in this.myPlugin) {
-      console.log('Plugin, key: ' + key + ', value: ' + this.myPlugin[key])
-    }
+    // for(let key in this.myPlugin) {
+    //   console.log('Plugin, key: ' + key + ', value: ' + this.myPlugin[key])
+    // }
+    chrome.identity.getAuthToken(
+      {
+        callback: function (token, grantedScope) {
+          console.log('Auth Token: ' + token + ', granted scope: ' + grantedScope)
+        }
+      }
+    )
   }
 }
