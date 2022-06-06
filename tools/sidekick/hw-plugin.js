@@ -20,15 +20,15 @@ export default class HwPlugin {
     gapiScript.src = "https://apis.google.com/js/client.js";
     gapiScript.onload = () => {
       console.log('Gapi On-Load called')
-      // window.gapi.load('client', () => {
+      window.gapi.load('client', () => {
       //   window.gapi.client.setApiKey(types.API_KEY)
       //   window.gapi.client.setClientId(types.CLIENT_ID)
       //   window.gapi.client.setDiscoveryDocs(types.DISCOVERY_DOCS)
       //   window.gapi.client.setScope(types.SCOPE)
       //   window.gapi.client.load('client:auth2', 'v3', () => {
-      //     console.log("gapi is ready")
+           console.log("gapi is ready")
       //     this.setState({ gapiReady: true });
-      //   });
+      });
       // });
     };
     document.head.append(gapiScript);
@@ -62,8 +62,8 @@ export default class HwPlugin {
   async printDocTitle(documentId) {
     try {
       console.log('Before Obtaining Doc with Doc Id: ' + documentId)
-      console.log('Gapi: ' + gapi + ', gapi-client: ' + gapi.client)
-      const response = await gapi.client.docs.documents.get({
+      console.log('Gapi: ' + window.gapi + ', gapi-client: ' + window.gapi.client)
+      const response = await window.gapi.client.docs.documents.get({
         documentId: documentId,
       });
       console.log('After Obtaining Doc, response: ' + response)
