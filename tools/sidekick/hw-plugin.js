@@ -13,7 +13,7 @@ export default class HwPlugin {
     this.myPlugin = plugin
   }
 
-  insertButtonClicked() {
+  loadGapi() {
     const script = document.createElement("script");
     script.src = "https://apis.google.com/js/client.js";
     script.onload = () => {
@@ -31,6 +31,9 @@ export default class HwPlugin {
     };
     document.body.appendChild(script);
 
+  }
+
+  insertButtonClicked() {
     console.log('Insert Button Click called, sidekick: ' + this.mySidekick + ', plugin: ' + this.myPlugin);
     let url = document.location.href
     let startingPos = url.search('\/d\/');
