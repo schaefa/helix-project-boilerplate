@@ -21,6 +21,7 @@ export default class HwPlugin {
     if(startingPos > 0 && endingPos > startingPos) {
       let documentId = url.substring(startingPos + 3, endingPos);
       console.log('Document Id: ' + documentId);
+      this.printDocTitle(documentId).then(console.log('Print Doc Title Done'))
     }
 
     // for(let key in this.myPlugin) {
@@ -33,6 +34,19 @@ export default class HwPlugin {
     //     }
     //   }
     // )
+  }
+
+  async printDocTitle(documentId) {
+    try {
+      const response = await gapi.client.docs.documents.get({
+        documentId: documentId,
+      });
+      const doc = response.result;
+      const output = `Document ${doc.title} successfully found.\n`;
+      console.log('Document Title: ' + output);
+    } catch (err) {
+      console.log('Document Title retrieval failed: ' + err.message);
+    }
   }
 
   /**
