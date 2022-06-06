@@ -19,7 +19,7 @@ export default class HwPlugin {
     let endingPos = url.search('\/edit');
     console.log('Url: ' + url + ', staring pos: ' + startingPos + ', ending pos: ' + endingPos);
     if(startingPos > 0 && endingPos > startingPos) {
-      let documentId = url.sub(startingPos + 3, endingPos);
+      let documentId = url.substring(startingPos + 3, endingPos);
       console.log('Document Id: ' + documentId);
     }
 
