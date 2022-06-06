@@ -1,5 +1,8 @@
 const CLIENT_ID = '<YOUR_CLIENT_ID>';
 const API_KEY = '<YOUR_API_KEY>';
+const DISCOVERY_DOC = 'https://docs.googleapis.com/$discovery/rest?version=v1';
+
+import gapi from 'https://apis.google.com/js/api.js'
 
 export default class HwPlugin {
 
