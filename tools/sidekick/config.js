@@ -19,12 +19,12 @@ window.hlx.initSidekick(
           isPressed: function (param1) {
             // alert('Plugin Button Pressed')
             console.log('isPressed(), param1: ' + param1 + ', keys: ' + Object.keys(param1))
-            hwPlugin.loadGapi()
             return true;
           }
         },
         callback: function (sidekick, plugin) {
           hwPlugin = new HwPlugin(sidekick, plugin)
+          hwPlugin.loadGapi()
         }
       }
     ]
