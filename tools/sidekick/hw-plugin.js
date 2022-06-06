@@ -61,9 +61,11 @@ export default class HwPlugin {
 
   async printDocTitle(documentId) {
     try {
+      console.log('Before Obtaining Doc with Doc Id: ' + documentId)
       const response = await gapi.client.docs.documents.get({
         documentId: documentId,
       });
+      console.log('After Obtaining Doc, response: ' + response)
       const doc = response.result;
       const output = `Document ${doc.title} successfully found.\n`;
       console.log('Document Title: ' + output);
