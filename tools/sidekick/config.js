@@ -11,12 +11,12 @@ window.hlx.initSidekick(
     plugins: [
       {
         id: 'Inserts',
-        button: {
-          text: 'Insert Into',
-          action: function () {
-            hwPlugin.insertButtonClicked();
-          },
-          isPressed: function (param1) {
+          button: {
+            text: 'Insert Into',
+            action: function () {
+              hwPlugin.insertButtonClicked();
+            },
+            isPressed: function (param1) {
             // alert('Plugin Button Pressed')
             console.log('isPressed(), param1: ' + param1 + ', keys: ' + Object.keys(param1))
             return true;

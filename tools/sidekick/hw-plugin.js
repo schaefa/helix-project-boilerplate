@@ -7,6 +7,7 @@ export default class HwPlugin {
   mySidekick
   myPlugin
   gapiInited
+  gapi
 
   constructor(sidekick, plugin) {
     this.mySidekick = sidekick
@@ -14,9 +15,10 @@ export default class HwPlugin {
   }
 
   loadGapi() {
-    const script = document.createElement("script");
-    script.src = "https://apis.google.com/js/client.js";
-    script.onload = () => {
+    const gapiScript = document.createElement("script");
+    gapiScript.id = 'gapi'
+    gapiScript.src = "https://apis.google.com/js/client.js";
+    gapiScript.onload = () => {
       console.log('Gapi On-Load called')
       // window.gapi.load('client', () => {
       //   window.gapi.client.setApiKey(types.API_KEY)
@@ -29,8 +31,8 @@ export default class HwPlugin {
       //   });
       // });
     };
-    document.body.appendChild(script);
-
+    document.head.append(gapiScript);
+    this.gapi = gapiScript
   }
 
   insertButtonClicked() {
