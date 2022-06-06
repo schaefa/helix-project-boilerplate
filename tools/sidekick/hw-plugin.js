@@ -2,8 +2,6 @@ const CLIENT_ID = '<YOUR_CLIENT_ID>';
 const API_KEY = '<YOUR_API_KEY>';
 const DISCOVERY_DOC = 'https://docs.googleapis.com/$discovery/rest?version=v1';
 
-import gapi from 'https://apis.google.com/js/api.js'
-
 export default class HwPlugin {
 
   mySidekick
@@ -16,6 +14,23 @@ export default class HwPlugin {
   }
 
   insertButtonClicked() {
+    const script = document.createElement("script");
+    script.src = "https://apis.google.com/js/client.js";
+    script.onload = () => {
+      console.log('Gapi On-Load called')
+      // window.gapi.load('client', () => {
+      //   window.gapi.client.setApiKey(types.API_KEY)
+      //   window.gapi.client.setClientId(types.CLIENT_ID)
+      //   window.gapi.client.setDiscoveryDocs(types.DISCOVERY_DOCS)
+      //   window.gapi.client.setScope(types.SCOPE)
+      //   window.gapi.client.load('client:auth2', 'v3', () => {
+      //     console.log("gapi is ready")
+      //     this.setState({ gapiReady: true });
+      //   });
+      // });
+    };
+    document.body.appendChild(script);
+
     console.log('Insert Button Click called, sidekick: ' + this.mySidekick + ', plugin: ' + this.myPlugin);
     let url = document.location.href
     let startingPos = url.search('\/d\/');
